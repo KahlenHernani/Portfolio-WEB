@@ -1,5 +1,4 @@
 
-import { ThemeToggle } from './components/themeToggle';
 import { NavBar } from './components/NavBar';
 import { HomeSection } from './components/HomeSection';
 import { AboutSection } from './components/AboutSection';
