@@ -24,14 +24,14 @@
     --secondary: 150 60% 57%;
   }
   .dark {
-    --border: 172 54% 36%;
-    --background: 0 52% 26%;
-    --foreground: 303 68% 39%;
+    --border: 172 74% 45%;
+    --background: 0 75% 40%;
+    --foreground: 303 92% 41%;
 
     --primary: 0 0% 0%; /* already black, unchanged */
-    --primary-foreground: 60 53% 34%;
+    --primary-foreground: 60 73% 34%;
 
-    --secondary: 150 60% 32%;
+    --secondary: 150 80% 32%;
   }
   *{
     @apply border-border;
