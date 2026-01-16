@@ -5,7 +5,7 @@ const projects =[
         id: 1,
         title: "WizzOff",
         description: "An interactive wizard dueling game that blends computer vision and real time gameplay. Uses camera input and gesture recognition to trigger spells and in-game actions. Focused on immersive interaction and AI driven mechanics.",
-        imageUrl: "./public/Wizzoff.png",
+        imageUrl: "/Wizzoff.png",
         tags: ["Pygame", "OpenCV","MediaPipe","Flask"],
         githubUrl: "https://www.youtube.com/watch?v=ifOJ0R5UQOc&t=6009s",
         devpostUrl: "#"
@@ -14,7 +14,7 @@ const projects =[
         id: 2,
         title: "CalenPal",
         description: "An AI powered smart calendar that automatically organizes tasks and schedules from uploaded syllabi and documents. Uses intelligent agents to prioritize deadlines and optimize time management. Designed to reduce cognitive load and improve productivity.",
-        imageUrl: "./public/CalenPal.png",
+        imageUrl: "/CalenPal.png",
         tags: ["React", "JavaScript","Flask","Agents"],
         githubUrl: "#",
         devpostUrl: "#"
@@ -23,7 +23,7 @@ const projects =[
         id: 3,
         title: "P Code Compiler and Stack-Based Virtual Machine",
         description: "A stack based virtual machine that executes P code instructions similar to early compiler architectures. Implements instruction parsing, execution, and memory management in C. Built to deepen understanding of low-level systems and compiler design.",
-        imageUrl: "./public/virtualmachine.jpeg",
+        imageUrl: "/virtualmachine.jpeg",
         tags: ["C"],
         githubUrl: "#",
         devpostUrl: "#"
@@ -32,7 +32,7 @@ const projects =[
         id: 4,
         title: "Portfolio Website",
         description: "A personal portfolio designed with Incan and Peruvian-inspired colors to reflect my cultural background and identity. Built using React, Vite, and Tailwind CSS with a focus on clean, modern UI. Planned future enhancements include an AI agent that dynamically interacts with the site, creating a more expressive and personality-driven experience.",
-        imageUrl: "./public/peru.jpg",
+        imageUrl: "/peru.jpg",
         tags: ["react", "tailwindcss","vite"],
         githubUrl: "#",
         devpostUrl: "#"

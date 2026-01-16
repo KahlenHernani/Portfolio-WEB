@@ -27,7 +27,7 @@ export const ContactSection = () => {
             </div>
             </div>
             {/* Center */}
-            <img src='./public/llama.png' className="w-80 h-80"/>
+            <img src='/llama.png' className="w-80 h-80"/>
             {/* Bottom Right */}
             <div>
             <p className="text-sm text-primary-foreground text-muted-foreground mt-85">
