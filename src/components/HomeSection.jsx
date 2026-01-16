@@ -9,7 +9,7 @@ export const HomeSection = () => {
 
                 <div className="space-y-6 flex ">
                     <div>
-                    <img src="/src/assets/portfolioPhoto.jpeg" alt="Profile Picture" className="rounded-full w-70 h-90 mx-auto object-cover border-16 border-border shadow-lg"/>
+                    <img src="./public/portfolioPhoto.jpeg" alt="Profile Picture" className="rounded-full w-70 h-90 mx-auto object-cover border-16 border-border shadow-lg"/>
                     </div>
                     <div>
                         <h1 className="text-4xl md:text-6xl font-bold text-primary tracking-tight">

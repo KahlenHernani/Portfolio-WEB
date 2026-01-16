@@ -27,7 +27,7 @@ export const AboutSection = () => {
                             <a href="#contact" className="px-6 py-2 rounded-full bg-secondary border border-primary text-primary hover:bg-foreground hover:text-primary font-bold transition-colors duration-300 btn-lg">
                                 Contact Me
                             </a>
-                            <a href="./src/assets/resume.pdf" download="resume.pdf" className="px-6 py-2 rounded-full border bg-secondary border-primary text-primary hover:bg-foreground hover:text-primary font-bold transition-colors duration-300 btn-lg">
+                            <a href="./public/resume.pdf" download="resume.pdf" className="px-6 py-2 rounded-full border bg-secondary border-primary text-primary hover:bg-foreground hover:text-primary font-bold transition-colors duration-300 btn-lg">
                                 Download CV
                             </a>
                         </div>

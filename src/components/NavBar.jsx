@@ -32,7 +32,7 @@ export const NavBar = () => {
 
                 {/*logo*/}
 
-                <img src='/src/assets/beanie.png' alt='Logo' className='w-10 h-10 flex items-center'/>
+                <img src='./public/beanie.png' alt='Logo' className='w-10 h-10 flex items-center'/>
 
                 {/*laptop nav*/}
                 <ThemeToggle className='hidden md:flex space-x-8 items-center'/>
