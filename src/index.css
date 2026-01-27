@@ -14,6 +14,7 @@
 
 @layer base {
   :root {
+    /* Light Mode - Your Original Peruvian Colors (UNCHANGED) */
     --border: 172 54% 61%;
     --background: 0 52% 56%;
     --foreground: 303 68% 69%;
@@ -22,24 +23,31 @@
     --primary-foreground: 60 53% 59%;
 
     --secondary: 150 60% 57%;
+    --footer: 0 0% 10%;
   }
+  
   .dark {
-    --border: 172 74% 45%;
-    --background: 0 75% 40%;
-    --foreground: 303 92% 41%;
+    /* Dark Mode - Darker versions of your Peruvian colors */
+    --border: 172 54% 35%;            /* Darker turquoise (same hue, darker) */
+    --background: 0 52% 25%;          /* Darker red/terracotta (same hue, darker) */
+    --foreground: 303 68% 80%;        /* Lighter purple for readability */
 
-    --primary: 0 0% 0%; /* already black, unchanged */
-    --primary-foreground: 60 73% 34%;
+    --primary: 0 0% 85%;              /* Light gray (readable on dark red) */
+    --primary-foreground: 60 53% 39%; /* Lighter yellow (same hue, lighter) */
 
-    --secondary: 150 80% 32%;
+    --secondary: 150 60% 35%;         /* Brighter green (same hue, brighter for visibility) */
+    --footer: 0 0% 10%;
   }
-  *{
+  
+  * {
     @apply border-border;
   }
-  html{
+  
+  html {
     @apply scroll-smooth;
   }
-  body{
+  
+  body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
@@ -66,27 +74,64 @@
   }
 }
 
-@utility text-glow{
+@utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(167,139,250,0.5);
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
 
 @utility card-hover {
   @apply transition-transform duration-300 ease-in-out hover:scale-[1.03] hover:shadow-lg;
 }
 
-#root{
+#root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 
-html,body{
+/* Background image */
+html, body {
   background-image: url('/pattern.jpg');
   background-repeat: repeat-y;
   background-size: 30% auto;
   background-position: 22% 0%;
-  overscroll-behavior: None;
+  overscroll-behavior: none;
 }
 
+/* Dark mode filter for background image */
+html.dark::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/pattern.jpg');
+  background-repeat: repeat-y;
+  background-size: 30% auto;
+  background-position: 22% 0%;
+  filter: brightness(0.4) contrast(1.1) saturate(0.75) sepia(0.15);
+  z-index: -1;
+  transition: filter 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Ensure content stays above the filtered background */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle dark overlay for extra depth in dark mode */
+html.dark body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  pointer-events: none;
+}
