@@ -8,7 +8,7 @@ const projects = [
         imageUrl: "/Wizzoff.png",
         tags: ["Pygame", "OpenCV", "MediaPipe", "Flask"],
         githubUrl: "https://www.youtube.com/watch?v=ifOJ0R5UQOc&t=6009s",
-        demoUrl: "#"
+        devpost: "https://devpost.com/software/wizzoff"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const projects = [
         imageUrl: "/CalenPal.png",
         tags: ["React", "JavaScript", "Flask", "Agents"],
         githubUrl: "#",
-        demoUrl: "#"
+        devpost: "https://devpost.com/software/calenpal"
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const projects = [
         imageUrl: "/virtualmachine.jpeg",
         tags: ["C"],
         githubUrl: "#",
-        demoUrl: "#"
+        devpost: "#"
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ const projects = [
         imageUrl: "/peru.jpg",
         tags: ["React", "Tailwind CSS", "Vite"],
         githubUrl: "#",
-        demoUrl: "#"
+        devpost: "#"
     }
 ];
 
@@ -56,7 +56,7 @@ export const ProgjectSection = () => {
                             key={project.id} 
                             className="bg-card rounded-lg shadow-md overflow-hidden card-hover bg-primary/5 border-2 border-transparent hover:border-primary/30 transition-all duration-300 flex flex-col"
                         >
-                            {/* Image Container with Overlay */}
+                            {/* Image Container */}
                             <div className="relative h-56 overflow-hidden group">
                                 <img 
                                     src={project.imageUrl} 
@@ -64,32 +64,6 @@ export const ProgjectSection = () => {
                                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 dark:brightness-75 dark:contrast-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                
-                                {/* Link Buttons on Hover */}
-                                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    {project.githubUrl !== "#" && (
-                                        <a 
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                                            aria-label={`View ${project.title} on GitHub`}
-                                        >
-                                            
-                                        </a>
-                                    )}
-                                    {project.demoUrl !== "#" && (
-                                        <a 
-                                            href={project.demoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-secondary hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                                            aria-label={`View ${project.title} demo`}
-                                        >
-                                            <ExternalLink className="h-5 w-5" />
-                                        </a>
-                                    )}
-                                </div>
                             </div>
                             
                             {/* Card Content */}
@@ -103,7 +77,7 @@ export const ProgjectSection = () => {
                                 </p>
                                 
                                 {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mt-auto">
+                                <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags.map((tag, index) => (
                                         <span 
                                             key={index}
@@ -113,6 +87,36 @@ export const ProgjectSection = () => {
                                         </span>
                                     ))}
                                 </div>
+
+                                {/* Links - Only show if not "#" */}
+                                {(project.githubUrl !== "#" || project.devpost !== "#") && (
+                                    <div className="flex gap-3 mt-auto pt-2 border-t border-border">
+                                        {project.githubUrl !== "#" && (
+                                            <a 
+                                                href={project.githubUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-sm font-medium"
+                                                aria-label={`View ${project.title} on GitHub`}
+                                            >
+                                                <Github className="h-4 w-4" />
+                                                <span>GitHub</span>
+                                            </a>
+                                        )}
+                                        {project.devpost !== "#" && (
+                                            <a 
+                                                href={project.devpost}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-sm font-medium"
+                                                aria-label={`View ${project.title} on Devpost`}
+                                            >
+                                                <ExternalLink className="h-4 w-4" />
+                                                <span>Devpost</span>
+                                            </a>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </article>
                     ))}
