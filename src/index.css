@@ -32,7 +32,7 @@
     --background: 0 52% 25%;          /* Darker red/terracotta (same hue, darker) */
     --foreground: 303 68% 80%;        /* Lighter purple for readability */
 
-    --primary: 0 0% 85%;              /* Light gray (readable on dark red) */
+    --primary: 0 0% 80%;              /* Light gray (readable on dark red) */
     --primary-foreground: 60 53% 39%; /* Lighter yellow (same hue, lighter) */
 
     --secondary: 150 60% 35%;         /* Brighter green (same hue, brighter for visibility) */
@@ -134,4 +134,35 @@ html.dark body::after {
   background: rgba(0, 0, 0, 0.2);
   z-index: 0;
   pointer-events: none;
+}
+/* Gold Foil Text Effect - Incan Gold */
+@utility gold-foil-text {
+  background: linear-gradient(
+    135deg,
+    #D4AF37 0%,
+    #FFD700 25%,
+    #F4E06D 50%,
+    #FFD700 75%,
+    #D4AF37 100%
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 3s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+  position: relative;
+}
+
+.dark .gold-foil-text {
+  filter: drop-shadow(0 2px 6px rgba(255, 215, 0, 0.4));
+}
+
+@keyframes gold-shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }

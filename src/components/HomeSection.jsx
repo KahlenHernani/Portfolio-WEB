@@ -9,7 +9,7 @@ export const HomeSection = () => {
             <div className="container max-w-4xl mx-auto text-center z-10">
 
                 <div className="space-y-6 flex flex-col md:flex-row items-center gap-8">
-                    <div className="relative group">
+                    <div className="relative group gold-foil-text">
                         <img 
                             src="/portfolioPhoto.jpeg" 
                             alt="Kahlen Hernani - Computer Science student" 
@@ -21,9 +21,9 @@ export const HomeSection = () => {
                         <h1 className="text-4xl md:text-6xl font-bold text-primary tracking-tight">
                             <span className="text-foreground">Yo, I'm</span>
                             {' '}
-                            <span className="text-secondary">Kahlen</span>
+                            <span className="gold-foil-text">Kahlen</span>
                             {' '}
-                            <span className="text-primary-foreground">Hernani</span>
+                            <span className="gold-foil-text">Hernani</span>
                         </h1>
                         <div className="p-4 rounded-lg mt-6 inline-block max-w-2xl">
                             <p className="text-xl md:text-2xl text-primary font-bold leading-relaxed">

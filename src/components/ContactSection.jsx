@@ -11,10 +11,10 @@ export const ContactSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                     {/* Contact Information */}
                     <div className="md:col-span-2">
-                        <h2 id="contact-heading" className="text-4xl md:text-6xl font-bold text-primary-foreground mb-8">
+                        <h2 id="contact-heading" className="text-4xl md:text-6xl font-bold gold-foil-text mb-8">
                             Contact
                         </h2>
-                        <div className="space-y-4">
+                        <div className="space-y-4 gold-foil-text">
                             {/* Email */}
                             <a 
                                 href="mailto:Kahlenhernani@gmail.com"
