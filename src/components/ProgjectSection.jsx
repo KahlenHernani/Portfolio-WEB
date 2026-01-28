@@ -36,6 +36,15 @@ const projects = [
         tags: ["React", "Tailwind CSS", "Vite"],
         githubUrl: "#",
         devpost: "#"
+    },
+    {
+        id: 5,
+        title: "Lockdown Radar",
+        description: "An app for teachers to communicate in realtime with officials during lockdown situations. Built using React Native for cross-platform mobile support and Firebase for real-time data syncing. Focused on rapid communication and safety during emergencies.",
+        imageUrl: "/lockdownRadar.png",
+        tags: ["React Native", "Firebase"],
+        githubUrl: "https://github.com/KahlenHernani/Lockdown_Radar",
+        devpost: "https://devpost.com/software/lockdown-radar"
     }
 ];
 
